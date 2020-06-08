@@ -58,11 +58,11 @@ namespace MundoPC1
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "491431732673-s43uf2h1norqfcahklroarneo79vkbo0.apps.googleusercontent.com",
+                ClientSecret = "A__hHGch5Ab30feTkfDUEFzT"
+            });
         }
     }
 }
