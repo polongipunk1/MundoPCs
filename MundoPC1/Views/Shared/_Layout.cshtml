@@ -7,30 +7,38 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <title>MundoPC</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/estilos.css")
+    @Styles.Render("~/Content/styles.css")
     @Styles.Render("~/Img/png")
     @Styles.Render("~/Img/jpg")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body class="fondo-login">
-    <header class="menu-mobil">
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu"><img src="~/Img/menu.png" alt=""></label>
-        <nav class="menu">
-            <ul>
-                <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                <li>@Html.ActionLink("Productos", "productos", "Home")</li>
-                <li>@Html.ActionLink("Mis compras", "mis_compras", "Home")</li>
-                <li>@Html.ActionLink("Carrito", "carrito", "Home")</li>
+ 
+    
+        <nav class="navbar navbar-expand-xl navbar-dark text-white sticky-top bgnav">   
+            <a href='@Url.Action("Index","Home")' class="navbar-brand text-white font-weight-bold shadow-logo text-danger">MundoPC</a>
+                <button class="navbar-toggler btn-outline-secondary" data-target="#menu" data-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon align-items-center"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav mr-auto layout">
+                        <li class="nav-item active"><a href='@Url.Action("Register","Account")' class="text-white nav-link hoverli">Productos</a></li>
+                        <li class="nav-item active"><a href='@Url.Action("Login","Account")' class="text-white nav-link hoverli">Mis compras</a></li>
+                        <li class="nav-item active"><a href='@Url.Action("Index","Home")' class="text-white nav-link voverli">Carrito</a></li>
 
-                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                <li>@Html.Partial("_LoginPartial")</li>
-            </ul>
-        </nav>
-    </header>
+
+                        @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
+                <li>@Html.ActionLink("About", "About", "Home")</li>
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+                    </ul>             
+                        @Html.Partial("_LoginPartial")                                      
+                </div>
+</nav>
+    
+
+   
 
     @RenderBody()
     <div class="shadow-lg">

@@ -168,9 +168,11 @@ header label {
 .img-muestra {
     list-style: none;
 }
-.img-muestra img{
-    margin-bottom:20px;
-}
+
+    .img-muestra img {
+        margin-bottom: 20px;
+    }
+
 .titulo {
     margin: 0;
     font-family: fantasy;
@@ -204,7 +206,7 @@ header label {
 .main-section {
     margin: 0 auto;
     margin-top: 30%;
-    padding: 0;
+    padding: 0px;
 }
 
 .fondo-login {
@@ -322,7 +324,7 @@ button {
 
     .filtro ul {
         display: flex;
-        padding: 0;
+        padding: 0px;
         width: 100%;
     }
 
@@ -762,9 +764,31 @@ img {
 .ordenar {
     font-size: 70px;
 }
-.pdtop{
-    padding-top:10%;
+/*----------------Estilos nuevos-------------------*/
+.shadow-logo {
+    box-shadow: 13px 13px 13px rgba(64, 41, 41,.9);
+    border-bottom-right-radius: 12px;
 }
 
+shadowbtn-ri {
+    border-bottom-right-radius: 12px;
+    box-shadow: 0px 7px 5px rgba(61, 133, 133,.8);
+}
 
+.bgnav {
+    background: rgba(46,46,46,.9);
+    box-shadow: 0px 4px 3px rgba(64, 41, 41,.8);
+}
 
+.layout li:hover {
+    border-radius: 10px;
+    box-shadow: 0px 7px 5px rgba(61, 133, 133,.8);
+}
+
+.layout li a {
+    color: #fff;
+}
+
+.shadow-form {
+    box-shadow: 0px 0px 6px #848484;
+}
