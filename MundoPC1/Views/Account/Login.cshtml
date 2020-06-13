@@ -14,22 +14,22 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <section id="loginForm" class="shadow">
+                    <section id="loginForm" class="shadow-form p-2">
                         @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
                         {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                             <div class="mb-2">
-                                @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                                @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
                                 <div class="col-md-12 mb-1">
-                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control"})
-                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Ingrese su nombre de usuario"})
+                                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="mb-2">
                                 @Html.LabelFor(m => m.Password, new { @class = "control-label" })
                                 <div class="col-md-12 mb-1">
-                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Ingrese su contraseña" })
                                     @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                 </div>
                             </div>
