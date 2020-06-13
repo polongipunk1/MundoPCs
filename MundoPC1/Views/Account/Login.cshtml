@@ -22,21 +22,20 @@
                             <div class="mb-2">
                                 @Html.LabelFor(m => m.UserName, new { @class = "control-label" })
                                 <div class="col-md-12 mb-1">
-                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Ingrese su nombre de usuario"})
+                                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su nombre de usuario"})
                                     @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="mb-2">
                                 @Html.LabelFor(m => m.Password, new { @class = "control-label" })
                                 <div class="col-md-12 mb-1">
-                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Ingrese su contraseña" })
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su contraseña" })
                                     @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 
                             <div class="checkbox">
-                                @Html.CheckBoxFor(m => m.RememberMe)
-                                @*Html.LabelFor(m => m.RememberMe)*@
+                                @Html.CheckBoxFor(m => m.RememberMe)                                
                                 <label>Recordar contraseña?</label>
                             </div>
 

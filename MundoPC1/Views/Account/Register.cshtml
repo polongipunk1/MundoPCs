@@ -29,59 +29,57 @@
                                 @Html.ValidationSummary("", new { @class = "text-danger" })
                                 <div class="">
                                     @Html.LabelFor(m => m.Nombre, new { @class = "col-md-12 control-label" })
-                                    <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control", @placeholder = "Ingrese su nombre" })
+                                    <div class="col-md-12 mb-1 font-weight-bold">
+                                        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su nombre" })
                                         @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Apellidos, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Apellidos, new { @class = "form-control", @placeholder = "Ingrese sus apellidos" })
+                                        @Html.TextBoxFor(m => m.Apellidos, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese sus apellidos" })
                                         @Html.ValidationMessageFor(m => m.Apellidos, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.UserName, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Ingrese su nombre de usuario" })
+                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su nombre de usuario" })
                                         @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Email, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Ingrese su correo electrónico" })
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su correo electrónico" })
                                         @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-                                <div class="">
-                                    @*Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })*@
+                                <div class="">                                    
                                     <label>Contraseña</label>
                                     <div class="col-md-12 mb-1">
-                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Ingrese una contraseña" })
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese una contraseña" })
                                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
-                                <div>
-                                    @*Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-12 mb-1 control-label" })*@
+                                <div>                                    
                                     <label>Confirmar contraseña</label>
                                     <div class="col-md-12 mb-4">
-                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Confirme su contraseña" })
+                                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control text-center font-weight-bold", @placeholder = "Confirme su contraseña" })
                                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Direccion, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Direccion, new { @class = "form-control", @placeholder = "Ingrese su dirección donde vive" })
+                                        @Html.TextBoxFor(m => m.Direccion, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su dirección donde vive" })
                                         @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Colonia, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Colonia, new { @class = "form-control", @placeholder = "Ingrese su colonia" })
+                                        @Html.TextBoxFor(m => m.Colonia, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ingrese su colonia" })
                                         @Html.ValidationMessageFor(m => m.Colonia, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
@@ -95,14 +93,14 @@
                                 <div class="">
                                     @Html.LabelFor(m => m.CP, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.CP, new { @class = "form-control", @placeholder = "Ejemplo: 05320", pattern = "[0-9]+", MaxLength = "5", MinLength = "5" })
+                                        @Html.TextBoxFor(m => m.CP, new { @class = "form-control text-center font-weight-bold", @placeholder = "Ejemplo: 05320", pattern = "[0-9]+", MaxLength = "5", MinLength = "5" })
                                         @Html.ValidationMessageFor(m => m.CP, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Telefono, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control", placeholder = "10 digitos",pattern = "[0-9]+", MaxLength = "10",  MinLength = "10" })
+                                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control text-center font-weight-bold", placeholder = "10 digitos",pattern = "[0-9]+", MaxLength = "10",  MinLength = "10" })
                                         @Html.ValidationMessageFor(m => m.Telefono, "", new { @class = "text-danger" })
                                     </div>
                                 </div>

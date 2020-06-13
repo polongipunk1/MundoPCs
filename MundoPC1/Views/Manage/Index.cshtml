@@ -3,8 +3,7 @@
     ViewBag.Title = "Manage";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="pdtop">
+<div class="container-fluid text-white text-center pt-4">
     <h1>Administración de cuentas</h1>
     <p class="text-success">@ViewBag.StatusMessage</p>
     <div>
@@ -15,7 +14,7 @@
                 [
                 @if (Model.HasPassword)
                 {
-                    @Html.ActionLink("Change your password", "ChangePassword")
+                    @Html.ActionLink("Cambia tu contraseña:", "ChangePassword")
                 }
                 else
                 {
@@ -26,7 +25,7 @@
             <dt>External Logins:</dt>
             <dd>
                 @Model.Logins.Count [
-                @Html.ActionLink("Manage", "ManageLogins") ]
+                @Html.ActionLink("Gestionar:", "ManageLogins") ]
             </dd>
             @*
                 Phone Numbers can used as a second factor of verification in a two-factor authentication system.
@@ -56,11 +55,11 @@
                     }
                 </dd>
             *@
-            <dt>Two-Factor Authentication:</dt>
+        <dt>Autenticación de dos factores:</dt>
             <dd>
                 <p>
-                    There are no two-factor authentication providers configured. See <a href="https://go.microsoft.com/fwlink/?LinkId=403804">this article</a>
-                    for details on setting up this ASP.NET application to support two-factor authentication.
+                    No hay proveedores de autenticación de dos factores configurados. Consulte <a href="https://go.microsoft.com/fwlink/?LinkId=403804">este artículo</a>
+                    para obtener detalles sobre cómo configurar esta aplicación ASP.NET para admitir la autenticación de dos factores.
                 </p>
                 @*@if (Model.TwoFactor)
                     {
