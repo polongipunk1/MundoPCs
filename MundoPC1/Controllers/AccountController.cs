@@ -374,7 +374,14 @@ namespace MundoPC1.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser {UserName = model.Email, Email = model.Email};
+                var user = new ApplicationUser {UserName = model.Email, Email = model.Email,
+                    Nombre = model.Nombre,
+                    Apellidos = model.Apellidos,
+                    Direccion = model.Direccion,
+                    Colonia = model.Colonia,
+                    Region = model.Region,
+                    CP = model.CP,
+                    Telefono = model.Telefono};
                 var result = await UserManager.CreateAsync(user);
                 if (result.Succeeded)
                 {

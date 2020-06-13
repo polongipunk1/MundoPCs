@@ -6,8 +6,52 @@ namespace MundoPC1.Models
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
+        [Display(Name = "Nombre(s)")]
+        public string Nombre { get; set; }
+
+        [Required]
+        [Display(Name = "Apellidos")]
+        public string Apellidos { get; set; }
+
+        [Required]
+        [Display(Name = "Nombre de usuario")]
+        public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
         [Display(Name = "Email")]
-        public string Email { get; set; }     
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Dirección")]
+        public string Direccion { get; set; }
+
+        [Required]
+        [Display(Name = "Colonia")]
+        public string Colonia { get; set; }
+
+        [Required]
+        [Display(Name = "Región")]
+        public string Region { get; set; }
+
+        [Required]
+        [Display(Name = "Código Postal")]
+        public string CP { get; set; }
+
+        [Required]
+        [Display(Name = "Télefono")]
+        public string Telefono { get; set; }
     }
 
     public class ExternalLoginListViewModel

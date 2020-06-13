@@ -74,7 +74,7 @@
                                 <div class="">
                                     @Html.LabelFor(m => m.Direccion, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Direccion, new { @class = "form-control", @placeholder = "Ingrese su dirección física" })
+                                        @Html.TextBoxFor(m => m.Direccion, new { @class = "form-control", @placeholder = "Ingrese su dirección donde vive" })
                                         @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
@@ -95,14 +95,14 @@
                                 <div class="">
                                     @Html.LabelFor(m => m.CP, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.CP, new { @class = "form-control", @placeholder = "Ingrese su código postal" })
+                                        @Html.TextBoxFor(m => m.CP, new { @class = "form-control", @placeholder = "Ejemplo: 05320", pattern = "[0-9]+", MaxLength = "5", MinLength = "5" })
                                         @Html.ValidationMessageFor(m => m.CP, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
                                 <div class="">
                                     @Html.LabelFor(m => m.Telefono, new { @class = "col-md-12 control-label" })
                                     <div class="col-md-12 mb-1">
-                                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control", @placeholder = "Ingrese su número teléfonico" })
+                                        @Html.TextBoxFor(m => m.Telefono, new { @class = "form-control", placeholder = "10 digitos",pattern = "[0-9]+", MaxLength = "10",  MinLength = "10" })
                                         @Html.ValidationMessageFor(m => m.Telefono, "", new { @class = "text-danger" })
                                     </div>
                                 </div>
