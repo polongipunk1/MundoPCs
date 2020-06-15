@@ -15,6 +15,7 @@ namespace MundoPC1.Controllers
     [Authorize, RequireHttps]
     public class AccountController : Controller
     {
+        
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
@@ -374,7 +375,7 @@ namespace MundoPC1.Controllers
                 {
                     return View("ExternalLoginFailure");
                 }
-                var user = new ApplicationUser {UserName = model.Email, Email = model.Email,
+                var user = new ApplicationUser {UserName = model.UserName, Email = model.Email,
                     Nombre = model.Nombre,
                     Apellidos = model.Apellidos,
                     Direccion = model.Direccion,
@@ -436,7 +437,6 @@ namespace MundoPC1.Controllers
 
             base.Dispose(disposing);
         }
-
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

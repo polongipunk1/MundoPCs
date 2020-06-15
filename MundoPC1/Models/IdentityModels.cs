@@ -37,6 +37,6 @@ namespace MundoPC1.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-        }
+        }       
     }
 }

@@ -741,10 +741,8 @@ img {
     border-radius: 5px;
     width: auto;
     height: 30px;
-    margin: 20px;
-    font-size: 18px;
+    font-size: 50px;
     background: #eee;
-    border-color: #eee;
     color: white;
     position: relative;
     margin-bottom: 20px;
@@ -792,3 +790,4 @@ shadowbtn-ri {
 .shadow-form {
     box-shadow: 0px 0px 6px #848484;
 }
+
