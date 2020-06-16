@@ -5,119 +5,83 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+    <div class="container-fluid text-white text-center pt-4">
+        <div class="row mt-5 justify-content-center align-items-center">
+            <div class="col-sm-4 text-center">
+                <div class="col-12 user-img">
+                    <img src="~/img/avatar.png" alt="">
+                    <h3>Detalle del usuario</h3>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <section class="shadow-form p-2">
+                            <div class="">
+                                @Html.LabelFor(m => m.Nombre, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Nombre)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Apellidos, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Apellidos)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.UserName, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.UserName)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Email)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Direccion, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Direccion)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Colonia, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Colonia)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Region, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Region)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.CP, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.CP)
+                                </div>
+                            </div>
+                            <div class="">
+                                @Html.LabelFor(m => m.Telefono, new { @class = "col-md-12 control-label font-weight-bold" })
+                                <div class="col-md-12 mb-1 form-control">
+                                    @Html.DisplayFor(model => model.Telefono)
+                                </div>
+                            </div>
 
-<div>
-    <h4>AspNetUsers</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+                            <div class="form-group pt-3">
+                                <label class="col-md-offset-2 col-md-12">@Html.ActionLink("Editar usuario", "Edit", new { id = Model.Id }, new { @class="btn btn-lg btn-outline-warning btn-block" })</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-12">
+                                    @Html.ActionLink("Regresar a la lista", "Index", null, new { @class = "btn btn-lg btn-outline-info btn-block" })
+                                </div>
+                            </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PasswordHash)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PasswordHash)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SecurityStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecurityStamp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessFailedCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessFailedCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.UserName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Nombre)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Apellidos)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Apellidos)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Direccion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Direccion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Colonia)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Colonia)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Region)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Region)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CP)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefono)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefono)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>         
